@@ -1,3 +1,6 @@
+body {
+    background-image: url("background.jpg");
+  }
 
 element.style {
 }
@@ -78,11 +81,6 @@ body {
     background-color: #fff;
 }
 <style>
-:root {
-    --artibot-launcher-bg-color: #3195d2;
-    --artibot-launcher-bg-hover-color: #009eff;
-    --artibot-launcher-image-color: #fff;
-}
 :root {
     --wp--preset--font-size--normal: 16px;
     --wp--preset--font-size--huge: 42px;
