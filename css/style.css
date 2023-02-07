@@ -1,142 +1,588 @@
 
 body {
-    font-family: "Open Sans", Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-body {
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-font-smoothing: auto;
-    text-rendering: optimizeLegibility !important;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: auto;
-}
-body {
     margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-}
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
+    font-family: Montserrat, arial, helvetica, sans-serif;
+      font-size: 14px;
+  color: #3D4849;
+  }
+  
+  html {
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-.clear:before, .clear:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {
-    content: "";
-    display: table;
-    table-layout: fixed;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-.clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
-    clear: both;
-}
-.clear:before, .clear:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {
-    content: "";
-    display: table;
-    table-layout: fixed;
-}
-
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
-@import "compass";
-$menu-color:#F06292;
-* {
-  @include box-sizing("border-box");
-}
-
-html,
-body {
-  margin: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-}
-#menu {
-    height: 100%;
-    position: fixed;
-    background-color: #fe5757;
-    width: 300px;
-    transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
-    transform: translateX(-100%);
-    left: 60px;
-}
-
-#menu.expanded {
-    transform: translateX(0%);
-    left: 0px;
-}
-
-.menu-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-#blob {
-    top: 0;
-    z-index: -1;
-    right: 60px;
-    transform: translateX(100%);
-    height: 100%;
-    position: absolute;
-}
-
-#blob-path {
-    height: 100%;
-    fill:  #fe5757;
-}
-
-.hamburger {
-    right: 20px;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;	
-}
-
-.hamburger .line {
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    position: absolute;
-}
-
-.hamburger .line:nth-child(2) {
-    top: 50%;
-    margin-top: -2px;
-}
-
-.hamburger .line:nth-child(3) {
-    bottom: 0;
-}
-
-h1 {
-    position: fixed;
-    right: 0;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  
+  
+  
+  /* Navigation */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .active {
+    background-color: red;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
     margin: 0;
-}
-
-ul {
-    padding: 0;
-    list-style: none;
-    width: 80%;
-    margin-left: 10%;
+  }
+  
+  .dropdown-content {
+    display: none;
     position: absolute;
-    top: 10px;
-}
-
-ul li {
-    color: #fff;
-    font-family: sans-serif;
-    padding: 20px 0;
-}
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  @media screen and (max-width: 680px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 680px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
+  .responsive {
+    
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .container {
+    position: relative;
+    width: 920px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: solid 0px;
+  }
+  
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  h1.shadow {
+    font-size: 40px;
+  text-shadow: 2px 2px 4px #000000;
+  }
+  
+  
+  h2 {
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  h3.orange {
+    font-size: 20px;
+      color: orange;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  h3.red {
+    font-size: 20px;
+      color: #c5161e;
+      font-weight: bold;
+      text-decoration: none;
+  
+  }
+  
+  h4 {
+  font-family: Caveat Brush; 
+  color: #ffa500; 
+  font-weight: 400; 
+  font-size: 36px; 
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  
+  }
+  
+  
+  h4.title {
+  font-family: Caveat Brush; 
+  color: #ffa500; 
+  font-weight: 400; 
+  font-size: 26px; 
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  
+  }
+  
+  
+  h4.red {
+      color: #c5161e;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 0 8px 0;
+      text-decoration: underline;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  p.margin {
+    margin:10px 40px 10px 10px;
+  }
+  
+  p.blog {
+    margin:10px 60px 10px 5px;
+      color: #000000;
+  
+  }
+  
+  a.bloglink, a.bloglink:visited {
+    background-color: #ffa500;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a.bloglink:hover, a.bloglink:active {
+    background-color: red;
+  }
+  
+  p.blogmore {
+    margin:10px 60px 10px 5px;
+      color: #ffa550;
+      font-weight: bold;
+  }
+  
+  .small {
+    font-size: 12px;
+  }
+  
+  .smaller {
+    font-size: 10px;
+  }
+  
+  a.links{ font: 14px arial, helvetica, sans-serif;
+      text-decoration:none;
+      color : #ffa500;
+  }
+      a.links:hover{
+      text-decoration:underline;
+      color : maroon;
+  }
+  
+  a.blog{ font: 16px;
+      text-decoration:none;
+      color : #ffa500;
+  }
+      a.blog:hover{
+      text-decoration:underline;
+      color : maroon;
+  }
+  
+  a.menu{ font: 14px arial, helvetica, sans-serif;
+      text-decoration:none;
+      color : grey;
+  }
+      a.menu:hover{
+      text-decoration:underline;
+      color : maroon;
+  }
+  
+  a.vid{ font: 14px arial, helvetica, sans-serif;
+      text-decoration:none;
+      color : grey;
+  }
+      a.vid:hover{
+      text-decoration:underline;
+      color : white;
+  }
+  
+  .vid {
+    text-align: center;
+      color: #ffffff;
+  }
+  
+  
+  ul {
+    list-style-image: url('images/lv.hill.jpg');
+  font-size: 14px;
+  padding-left:30px;
+  
+  }
+  
+  li {
+  margin-top:10px
+  }
+  
+  ul.more {
+    list-style-image: url('images/lv.hill.jpg');
+  font-size: 14px;
+  padding-left:40px;
+  }
+  
+  
+      figure { 
+      float: right; 
+      display: block;
+      padding: 0px 0px 0px 0px;
+      vertical-align: top;
+      margin: 0px; 
+      margin-left:15px; 
+       margin-bottom: 0px; 
+      margin-right: 15px;
+  }
+  
+  figure figcaption {
+      border: 0px;
+      text-align: center;
+      font-size: 12px;
+  }
+  
+  
+  figure.left { 
+      float: left; 
+      display: block;
+      padding: 0px 0px 0px 0px;
+      vertical-align: top;
+      margin: 0px; 
+      margin-left:15px; 
+       margin-bottom: 0px; 
+      margin-right: 15px;
+      border: 0px;
+  }
+  
+  figure.left figcaption {
+      border: 0px;
+      text-align: center;
+      font-size: 12px;
+  }
+  
+  #img {
+    display:block;
+      margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  .center {
+    border: solid 1px black;
+      
+      vertical-align: top;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+  }
+  
+  .left {
+    border: solid 1px black;
+    float: left;
+  padding: 0px 0px 0px 0px;
+      vertical-align: top;
+      margin-top: 0px; 
+      margin-left:15px; 
+       margin-bottom: 0px; 
+      margin-right: 15px;
+  }
+  
+  
+  .leftnoborder {
+    border: 0px;
+    float: left;
+      padding: 0px 0px 0px 0px;
+      vertical-align: top;
+      margin-top: 0px; 
+      margin-left:15px; 
+       margin-bottom: 0px; 
+      margin-right: 15px;
+  }
+  
+  .leftnobordersm {
+    border: 0px;
+    float: left;
+      padding: 0px 0px 0px 0px;
+      vertical-align: top;
+      margin-top: 0px; 
+      margin-left:10px; 
+       margin-bottom: 0px; 
+      margin-right:5px;
+  }
+  
+  .right {
+    border: solid 1px black;
+    float: right;
+      padding: 0px 0px 0px 0px;
+      vertical-align: top;
+      margin: 0px; 
+      margin-left:15px; 
+       margin-bottom: 0px; 
+      margin-right: 15px;
+  }
+  
+  .rightnoborder {
+    border: 0px;
+    float: right;
+      padding: 0px 0px 0px 0px;
+      vertical-align: top;
+      margin-top: 0px; 
+      margin-left:15px; 
+       margin-bottom: 0px; 
+      margin-right: 15px;
+  
+  }
+  
+  
+  @media screen and (max-width: 680px) {
+  
+  
+  figure {
+  text-align: center; 
+  float: none;
+      display: block;
+  margin-left: auto;
+    margin-right: auto;
+  }
+  
+  figure.left {
+  text-align: center; 
+  float: none;
+      display: block;
+  margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  
+    .right{
+    
+      float: none;
+      display: block;
+  margin-left: auto;
+    margin-right: auto;
+    
+    }
+  
+  .rightnoborder{
+    
+      float: none;
+      display: block;
+  margin-left: auto;
+    margin-right: auto;
+    
+    }
+  
+  .left{
+    
+      float: none;
+      display: block;
+  margin-left: auto;
+    margin-right: auto;
+    
+    }
+  
+  .leftnoborder{
+    
+      float: none;
+      display: block;
+  margin-left: auto;
+    margin-right: auto;
+    
+    }
+  
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+      font-size: 14px;
+      font-weight: normal;
+  text-align: justify;
+  
+  }
+  
+  .column50 {
+    float: left;
+    width: 50%;
+      font-size: 14px;
+      font-weight: bold;
+  
+  }
+  
+  .column100 {
+    float: left;
+    width: 50%;
+      font-size: 14px;
+      font-weight: bold;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 680px wide, make the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 680px) {
+   
+  body {
+    margin: 0;
+    font-family: Montserrat, arial, helvetica, sans-serif;
+      font-size: 12px;
+  color: #3D4849;
+  }
+  
+  
+  
+  /* .header {
+              width: 100%;
+          height: 120px;
+          background-image: url("images/openhand-notebook2.png");
+         background-position: top center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-size: 110%;
+  } */
+  
+  p {
+    font-size: 16px;
+  }
+  
+  
+   .column {
+      width: 100%;
+    }
+  
+  
+    .column100 {
+      width: 100%;
+      float: left;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  
+  
+  /*  content */
+  .content {
+    background-color: #ddd;
+    padding: 10px;
+    
+  }
+  
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  
+  
+  /* footer */
+  .footer {
+    background-color: #333;
+    padding: 20px;
+      text-align: center;
+      font-size: 10px;
+      color: white;
+  }
+  
+  
+  
